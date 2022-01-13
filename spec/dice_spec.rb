@@ -7,6 +7,8 @@ describe Dice do
     expect(score).to be <7
   end
   it 'rolls many dice and shows scores' do
-    expect(subject.roll(4)[3]).to be_a_kind_of(Integer)
+    score = subject.roll(4)
+    expect(score[3]).to be >0
+    expect(score[3]).to be <7
   end
 end
